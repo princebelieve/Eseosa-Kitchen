@@ -58,3 +58,22 @@ a { color: inherit; text-decoration: none; }
 .values-strip div { display: flex; flex-direction: column; gap: 7px; border-left: 1px solid rgba(23,23,23,.3); padding-left: 20px; }.values-strip strong { font: 600 21px 'Playfair Display', serif; }.values-strip span { font-size: 12px; }
 .menu-group > img { width: 100%; height: 150px; margin-bottom: 18px; }.menu-group h2 { margin-top: 0; }
 @media (max-width: 700px) { .category-row, .values-strip { grid-template-columns: 1fr; }.values-strip { gap: 20px; padding: 32px 20px; }.category-row img { height: 220px; } }
+
+.menu-toggle { display: none; }
+@media (max-width: 700px) {
+	.nav-inner { position: relative; }
+	.menu-toggle { display: flex; width: 42px; height: 42px; margin-left: auto; padding: 10px; border: 1px solid rgba(255,255,255,.45); background: transparent; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; }
+	.menu-toggle span { display: block; width: 20px; height: 2px; background: #fff; transition: transform .2s ease, opacity .2s ease; }
+	.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+	.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+	.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+	.nav-links { display: none; }
+	.nav-links.is-open { display: flex; position: absolute; top: 100%; left: 0; right: 0; z-index: 20; padding: 12px 20px 18px; background: #171717; border-top: 1px solid rgba(255,255,255,.2); flex-direction: column; gap: 0; box-shadow: 0 12px 20px rgba(0,0,0,.18); }
+	.nav-links.is-open a { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+	.nav-links.is-open a:last-child { border-bottom: 0; }
+	.hero h1, .page-intro h1 { overflow-wrap: anywhere; }
+	.hero-text { font-size: 15px; }
+	.hero-actions .btn { width: 100%; text-align: center; }
+	.section-heading h2, .process-band h2, .about-section h2, .home-cta h2 { line-height: 1.05; }
+	.map-wrap iframe { height: 280px; }
+}
