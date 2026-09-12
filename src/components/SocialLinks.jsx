@@ -2,7 +2,6 @@ import React from 'react';
 import { FaFacebookF, FaInstagram, FaShareNodes, FaTiktok, FaWhatsapp, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 const socialLinks = [
-  { label: 'WhatsApp', href: 'https://wa.me/2349120837198', icon: FaWhatsapp },
   { label: 'Facebook', href: 'https://www.facebook.com/', icon: FaFacebookF },
   { label: 'TikTok', href: 'https://www.tiktok.com/', icon: FaTiktok },
   { label: 'Instagram', href: 'https://www.instagram.com/', icon: FaInstagram },
