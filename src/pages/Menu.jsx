@@ -50,28 +50,58 @@ const Menu = () => {
 
 const MenuItem = ({ name, detail, image, onImageClick }) => {
   const message = encodeURIComponent(`Hello Eseosa's Kitchen! I would like to order ${name}.`);
+  const shareUrl = `${window.location.origin}/menu`; 
+  const shareText = `Check out ${name} from Eseosa's Kitchen.`;
+
+  const handleShare = async (event) => {
+    event.preventDefault();
+
+    const shareData = {
+      title: "Eseosa's Kitchen",
+      text: shareText,
+      url: shareUrl,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+      }
+    } catch {
+      // Ignore share errors and keep menu flow intact.
+    }
+  };
 
   return (
-    <a className="menu-item" href={`https://wa.me/2349120837198?text=${message}`} target="_blank" rel="noopener noreferrer">
-      <img
-        src={image}
-        alt={name}
-        onClick={(event) => {
-          event.preventDefault();
-          onImageClick(image, name);
-        }}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter' || event.key === ' ') {
+    <div className="menu-item">
+      <a className="menu-item-main" href={`https://wa.me/2349120837198?text=${message}`} target="_blank" rel="noopener noreferrer">
+        <img
+          src={image}
+          alt={name}
+          onClick={(event) => {
             event.preventDefault();
             onImageClick(image, name);
-          }
-        }}
-        role="button"
-        tabIndex={0}
-      />
-      <div><h3>{name}</h3><p>{detail}</p></div>
-      <span aria-hidden="true">→</span>
-    </a>
+          }}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              onImageClick(image, name);
+            }
+          }}
+          role="button"
+          tabIndex={0}
+        />
+        <div><h3>{name}</h3><p>{detail}</p></div>
+      </a>
+      <div className="menu-item-actions">
+        <button type="button" className="menu-share" aria-label={`Share ${name}`} title="Share item" onClick={handleShare}>↗</button>
+        <a href={`https://wa.me/2349120837198?text=${message}`} target="_blank" rel="noopener noreferrer" aria-label={`Order ${name}`} title="Order item" className="menu-order-arrow">→</a>
+      </div>
+    </div>
   );
 };
 

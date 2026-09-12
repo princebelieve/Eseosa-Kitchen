@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import SocialLinks from './components/SocialLinks.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
-import ShareButton from './components/ShareButton.jsx';
 import Home from './pages/Home.jsx';
 import Menu from './pages/Menu.jsx';
 import About from './pages/About.jsx';
@@ -38,7 +37,6 @@ function App() {
         <p>Follow us</p>
         <SocialLinks />
       </footer>
-      <ShareButton />
       <WhatsAppButton />
     </BrowserRouter>
   );
