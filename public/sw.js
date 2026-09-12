@@ -1,5 +1,5 @@
-const CACHE_NAME = 'eseosa-kitchen-v1';
-const APP_SHELL = ['/', '/index.html', '/manifest.webmanifest', '/offline.html'];
+const CACHE_NAME = 'eseosa-kitchen-v3';
+const APP_SHELL = ['/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
