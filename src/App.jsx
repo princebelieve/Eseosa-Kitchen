@@ -5,6 +5,7 @@ import SocialLinks from './components/SocialLinks.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import Home from './pages/Home.jsx';
 import Menu from './pages/Menu.jsx';
+import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import './styles/global.css';
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <footer className="site-footer">

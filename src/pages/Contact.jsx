@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact-details">
           <ScrollReveal as="div" direction="left" delay={120}>
             <small>Find us</small>
-            <h2>Benin City,<br />Edo State.</h2>
+            <h2>Upper Mission Extension,<br />before Aduwawa,<br />Idunmwunowina Community,<br />opposite Mother Mary Way.</h2>
           </ScrollReveal>
           <ScrollReveal as="div" direction="up" delay={180}>
             <small>Call or chat</small>
@@ -27,7 +27,7 @@ const Contact = () => {
           </ScrollReveal>
         </div>
         <ScrollReveal as="div" className="map-wrap" direction="right" delay={200}>
-          <iframe title="Map showing Benin City, Edo State" src="https://www.google.com/maps?q=Benin%20City%2C%20Edo%20State%2C%20Nigeria&output=embed" width="100%" height="360" style={{ border: 0 }} allowFullScreen loading="lazy" />
+          <iframe title="Map showing Eseosa's Kitchen location" src="https://www.google.com/maps?q=Upper%20Mission%20Extension%2C%20before%20Aduwawa%2C%20Idunmwunowina%20Community%2C%20opposite%20Mother%20Mary%20Way%2C%20Benin%20City%2C%20Edo%20State%2C%20Nigeria&output=embed" width="100%" height="360" style={{ border: 0 }} allowFullScreen loading="lazy" />
         </ScrollReveal>
       </div>
     </main>
