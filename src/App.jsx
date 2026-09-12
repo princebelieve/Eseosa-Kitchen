@@ -3,13 +3,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import SocialLinks from './components/SocialLinks.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
+import ShareButton from './components/ShareButton.jsx';
 import Home from './pages/Home.jsx';
 import Menu from './pages/Menu.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import { initPullToRefresh } from './utils/pullToRefresh.js';
 import './styles/global.css';
 
 function App() {
+  const handleRefresh = () => {
+    window.location.reload();
+  };
+
+  React.useEffect(() => {
+    const cleanup = initPullToRefresh({ onRefresh: handleRefresh, threshold: 90 });
+    return cleanup;
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -27,7 +38,7 @@ function App() {
         <p>Follow us</p>
         <SocialLinks />
       </footer>
-      {/* Global Button - It appears on every page */}
+      <ShareButton />
       <WhatsAppButton />
     </BrowserRouter>
   );
