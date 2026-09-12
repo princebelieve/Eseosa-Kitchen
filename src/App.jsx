@@ -20,7 +20,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <footer className="site-footer">
-        <p>Follow Eseosa's Kitchen</p>
+        <div className="site-footer-brand">
+          <img src="/logo.png" alt="Eseosa's Kitchen logo" />
+          <span>Eseosa's Kitchen</span>
+        </div>
+        <p>Follow us</p>
         <SocialLinks />
       </footer>
       {/* Global Button - It appears on every page */}

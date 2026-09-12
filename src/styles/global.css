@@ -149,10 +149,18 @@ button, input, textarea, select { font: inherit; }
 .whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 10; display: grid; place-items: center; width: 56px; height: 56px; background: #1f9d58; color: white; border-radius: 50%; font-size: 30px; box-shadow: 0 8px 22px rgba(31,157,88,.25); transition: transform .2s ease, box-shadow .2s ease; }
 .whatsapp-float:hover, .whatsapp-float:focus-visible { transform: translateY(-3px) scale(1.04); box-shadow: 0 12px 28px rgba(31,157,88,.36); }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px max(28px, calc((100% - 1124px) / 2)); background: #171717; color: #fff; }
+.site-footer-brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.site-footer-brand img { width: 46px; height: 46px; border-radius: 12px; object-fit: contain; background: rgba(255,255,255,.06); }
+.site-footer-brand span { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: #fff; }
 .site-footer p { margin: 0; color: #ff9677; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
 .social-links { display: flex; align-items: center; gap: 10px; }
 .social-link { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: 16px; transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
 .social-link:hover, .social-link:focus-visible { background: var(--orange); border-color: var(--orange); color: #171717; transform: translateY(-2px); }
+
+@media (max-width: 700px) {
+  .site-footer { flex-wrap: wrap; justify-content: center; text-align: center; }
+  .site-footer-brand { justify-content: center; }
+}
 
 .lightbox-backdrop {
   position: fixed;
