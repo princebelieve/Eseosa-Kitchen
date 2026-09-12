@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 const WhatsAppButton = () => {
   return (
@@ -7,8 +8,10 @@ const WhatsAppButton = () => {
       target="_blank" 
       rel="noopener noreferrer"
       className="whatsapp-float"
+      aria-label="Order on WhatsApp"
+      title="Order on WhatsApp"
     >
-      <span aria-hidden="true">◉</span> Order on WhatsApp
+      <FaWhatsapp aria-hidden="true" />
     </a>
   );
 };
