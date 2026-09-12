@@ -320,6 +320,21 @@ button, input, textarea, select { font: inherit; }
 	.hero-actions .btn { width: 100%; text-align: center; }
 	.section-heading h2, .process-band h2, .about-section h2, .home-cta h2 { line-height: 1.05; }
 	.map-wrap iframe { height: 280px; }
+  .about-page { padding-top: 20px; }
+  .about-story, .about-mission { grid-template-columns: 1fr; gap: 22px; margin-top: 0; }
+  .about-story { margin-top: 10px; }
+  .story-card { border-radius: 18px; }
+  .story-card-image img { min-height: 240px; max-height: 300px; }
+  .story-card-copy { padding: 24px 20px; }
+  .story-card-copy h2, .about-mission h2 { font-size: 38px; line-height: 1.02; }
+  .story-card-copy p { font-size: 14px; }
+  .about-values { grid-template-columns: 1fr; gap: 14px; margin-top: 26px; }
+  .value-card { padding: 22px 18px; }
+  .value-card strong { font-size: 21px; }
+  .about-mission { margin-top: 38px; }
+  .mission-copy { font-size: 14px; }
+  .about-actions { align-items: stretch; flex-direction: column; gap: 16px; }
+  .about-actions .btn { width: 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

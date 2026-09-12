@@ -4,16 +4,16 @@ import ScrollReveal from '../components/ScrollReveal.jsx';
 
 const highlights = [
   {
-    title: 'Made from the heart',
-    text: 'Every plate is prepared with care, using recipes that remind people of home and family tables.',
+    title: 'Freshly prepared',
+    text: 'Every order is prepared with care, from smoky party jollof and comforting soups to crispy chicken and shawarma.',
   },
   {
-    title: 'Comfort food, every day',
-    text: 'From hearty soups to crispy chicken and loaded shawarma, we make sure there is something for every craving.',
+    title: 'Big portions',
+    text: 'We serve generous portions made for satisfying hunger and sharing the joy of good food.',
   },
   {
-    title: 'Local and welcoming',
-    text: 'We are proud to serve Benin City with warm hospitality, generous portions, and food that keeps people coming back.',
+    title: 'Benin City',
+    text: 'We bring local food and local love to tables across Benin City, Edo State.',
   },
 ];
 
@@ -22,10 +22,9 @@ const About = () => {
     <main className="about-page section-wrap">
       <ScrollReveal as="div" className="page-intro" direction="left" delay={80}>
         <p className="eyebrow">A little about us</p>
-        <h1>Welcome to<br /><span>Eseosa's Kitchen.</span></h1>
+        <h1>A place<br /><span>like home.</span></h1>
         <p>
-          We are a home-grown food brand serving comforting Nigerian classics and satisfying quick bites in Benin City,
-          Edo State.
+          Eseosa's Kitchen brings the flavors of Nigerian cooking and the joy of good comfort bites to tables across Benin City.
         </p>
       </ScrollReveal>
 
@@ -38,12 +37,11 @@ const About = () => {
           <p className="eyebrow">Our story</p>
           <h2>Food that feels<br /><span>familiar.</span></h2>
           <p>
-            Eseosa's Kitchen began with a simple idea: create a place where people can enjoy generous servings of the flavors
-            they love, served with warmth and consistency.
+            Eseosa's Kitchen is a place like home, serving the flavors people know and love with the warmth of a familiar table.
           </p>
           <p>
-            Whether it is smoky jollof rice, rich egusi, a steaming bowl of soup, or a satisfying shawarma, we aim to make every
-            order feel like a comforting home-cooked experience.
+            From smoky party jollof and rich egusi to loaded shawarma and crispy chicken, every order is prepared with care and
+            served generously.
           </p>
         </ScrollReveal>
       </section>
@@ -59,14 +57,14 @@ const About = () => {
 
       <section className="about-mission">
         <ScrollReveal as="div" direction="left" delay={120}>
-          <p className="eyebrow">Why people pick us</p>
-          <h2>Fresh food,<br /><span>kind service.</span></h2>
+          <p className="eyebrow">Our promise</p>
+          <h2>Good food,<br /><span>good mood.</span></h2>
         </ScrollReveal>
 
         <ScrollReveal as="div" className="mission-copy" direction="right" delay={180}>
           <p>
-            We believe good food should be accessible, satisfying, and memorable. That is why we focus on fresh ingredients,
-            careful preparation, and quick customer service from order to delivery.
+            We believe good food should feel generous, comforting, and easy to enjoy. That is why we focus on fresh preparation,
+            familiar flavors, and a warm experience from order to delivery.
           </p>
           <div className="about-actions">
             <Link className="btn" to="/menu">Explore the menu <span>↗</span></Link>
